@@ -24,7 +24,6 @@ public class CustomerGreetingController {
     ) {
         return Greeting.builder()
             .id(counter.incrementAndGet())
-            .content(greetingTemplate.formatted(gender ? "Mr. " : "Ms. ", customerName))
-            .build();
+            .content(greetingTemplate.formatted(gender ? "Mr. " : "Ms. ", customerName)).build();
     }
 }
