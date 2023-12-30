@@ -10,7 +10,7 @@ public class Customer {
     
     // @Column(name = "id") nếu tên khác với tên ở database
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String username;
