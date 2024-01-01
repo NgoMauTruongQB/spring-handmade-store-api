@@ -20,15 +20,19 @@ public class SecurityConfig {
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 
-        return httpSecurity.csrf(csrf -> csrf.disable())
+        return httpSecurity
+                .csrf(csrf -> csrf.disable())
+                .cors(cors -> cors.disable())
                 .authorizeHttpRequests(
                     requests -> requests
-                        .requestMatchers("/v1/register").permitAll()
-                        .requestMatchers("/v1/greeting").authenticated()
+                            .requestMatchers("/v1/register").permitAll()
+                            .requestMatchers("/v1/greeting").authenticated()
                 )
                 .formLogin(withDefaults())
                 .httpBasic(withDefaults()).build();
 
     }
+
+
 
 }

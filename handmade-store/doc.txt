@@ -1,0 +1,8 @@
+Demo API
+JSON: http://localhost:8080/v3/api-docs
+UI: http://localhost:8080/swagger-ui/index.html
+
+If you want see all api:
+You need add in SecurityConfig file: ' .requestMatchers("/**").permitAll() '
+
+And start: ' http://localhost:8080/swagger-ui/index.html '
